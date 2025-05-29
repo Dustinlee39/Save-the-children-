@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Kids, Happy Kids</title>
+  <style>
+    :root {
+      --primary: #d81b60;
+      --accent: #fce4ec;
+      --light-bg: #fff;
+      --dark-text: #333;
+      --soft-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f6;
+      color: var(--dark-text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 0.7rem 1rem;
+      box-shadow: var(--soft-shadow);
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      animation: fadeInUp 1s ease both;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background: var(--accent);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: var(--soft-shadow);
+      margin-top: 0.5rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    a.button:hover {
+      background: #ad1457;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .faq h3 {
+      cursor: pointer;
+      background: var(--accent);
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .faq p {
+      display: none;
+      padding: 10px 15px;
+    }
+
+    footer {
+      background: #f8bbd0;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Healthy Kids, Happy Kids</h1>
+  <p>Community Baby Shower & Family Health Fair</p>
+</header>
+
+<nav>
+  <a href="#details">Event Details</a>
+  <a href="#support">Support Providers</a>
+  <a href="#faq">FAQs</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <section id="details">
+    <h2>📅 Event Details</h2>
+    <div class="card">
+      <p><strong>Date:</strong> June 24th</p>
+      <p><strong>Time:</strong> 11:30 AM – 1:30 PM</p>
+      <p><strong>Location:</strong> Patrick Lynch Library, Poteau, OK</p>
+      <p><strong>Room:</strong> Community Room</p>
+      <a class="button" href="https://www.google.com/maps?q=Patrick+Lynch+Library+Poteau+OK" target="_blank">Get Directions</a>
+    </div>
+    <iframe 
+      src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Patrick+Lynch+Library+Poteau+OK" 
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <section id="support">
+    <h2>🤝 Support Providers Attending</h2>
+    <ul class="card">
+      <li>Save the Children – Family Service Coordinator</li>
+      <li>Breastfeeding Peer Counselor</li>
+      <li>SoonerSelect</li>
+      <li>Children First</li>
+      <li>WIC Paraprofessional</li>
+      <li>Parenting & Childhood Development Experts</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Event Purpose</h2>
+    <div class="card">
+      <p>This family-focused event connects local parents with health professionals, support programs, and baby care services. Whether you're expecting, parenting, or just curious — join us for expert help, free resources, and giveaways!</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>📱 Scan to Visit</h2>
+    <div class="card">
+      <p>Scan the QR code below to open this event website on your phone!</p>
+      <img src="qr-code.png" alt="QR Code to event website" style="max-width: 200px;">
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>❓FAQs</h2>
+    <div>
+      <h3 onclick="toggleFAQ(this)">Who can attend?</h3>
+      <p>Anyone in the community, especially parents and caregivers of young children.</p>
+
+      <h3 onclick="toggleFAQ(this)">Is it free?</h3>
+      <p>Yes! The event is 100% free to attend.</p>
+
+      <h3 onclick="toggleFAQ(this)">Do I need to register?</h3>
+      <p>No registration required. Just show up!</p>
+
+      <h3 onclick="toggleFAQ(this)">Are there giveaways?</h3>
+      <p>Yes — baby care items, supplies, and educational materials will be given while supplies last.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>📞 Contact</h2>
+    <div class="card">
+      <p>For more information, contact your local Save the Children representative:</p>
+      <p><strong>Email:</strong> <a href="mailto:info@savethechildren.org">info@savethechildren.org</a></p>
+      <p><strong>Phone:</strong> (Insert Office Number)</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Healthy Kids, Happy Kids | Designed for Families & Communities
+</footer>
+
+<script>
+  function toggleFAQ(el) {
+    const next = el.nextElementSibling;
+    next.style.display = next.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
